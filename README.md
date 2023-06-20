@@ -4,6 +4,7 @@ apt install nginx certbot python3-certbot-nginx php7.4-fpm
 
 
 server {
+
         listen 80;
         listen [::]:80;
 
@@ -12,12 +13,9 @@ server {
         root /var/www/html;
         index index.html;
        
-
         location / {
-
                 try_files $uri $uri/ =404;
         }
-
 
         location ~ \.php$ {
                 include snippets/fastcgi-php.conf;
@@ -27,4 +25,5 @@ server {
 
 
 
-certbot --nginx -d <domain>
+certbot --nginx -d <domainname>
+
