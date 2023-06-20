@@ -27,3 +27,4 @@ server {
 
 certbot --nginx -d #domainname
 
+Credit : https://github.com/librespeed/speedtest
