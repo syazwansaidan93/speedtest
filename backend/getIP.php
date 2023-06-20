@@ -193,7 +193,6 @@ function sendHeaders()
 function sendResponse(
     $ip,
     $ipInfo = null,
-    $distance = null,
     $rawIspInfo = null
 ) {
     $processedString = $ip;
@@ -207,10 +206,6 @@ function sendResponse(
     ) {
         $processedString .= ', '.$rawIspInfo['country'];
     }
-    if (is_string($distance)) {
-        $processedString .= ' ('.$distance.')';
-    }
-
     sendHeaders();
     echo json_encode([
         'processedString' => $processedString,
@@ -235,4 +230,4 @@ if (!isset($_GET['isp'])) {
 $rawIspInfo = getIspInfo($ip);
 $isp = getIsp($rawIspInfo);
 
-sendResponse($ip, $isp, $distance, $rawIspInfo);
+sendResponse($ip, $isp, $rawIspInfo);
