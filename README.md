@@ -4,7 +4,6 @@ apt install nginx certbot python3-certbot-nginx php7.4-fpm
 
 
 server {
-
         listen 80;
         listen [::]:80;
 
