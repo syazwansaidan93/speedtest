@@ -24,7 +24,7 @@ server {
                 include snippets/fastcgi-php.conf;
                 fastcgi_pass unix:/run/php/php7.4-fpm.sock;
         }
-
+}
 
 
 
