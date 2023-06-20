@@ -8,7 +8,7 @@ server {
         listen 80;
         listen [::]:80;
 
-        server_name <domain>;
+        server_name #domain;
 
         root /var/www/html;
         index index.html;
@@ -25,5 +25,5 @@ server {
 
 
 
-certbot --nginx -d <domainname>
+certbot --nginx -d #domainname
 
