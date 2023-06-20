@@ -195,10 +195,7 @@ function sendResponse(
     $ipInfo = null,
     $rawIspInfo = null
 ) {
-    $processedString = $ip;
-    if (is_string($ipInfo)) {
-        $processedString .= ' - '.$ipInfo;
-    }
+    
 
     if (
         is_array($rawIspInfo)
