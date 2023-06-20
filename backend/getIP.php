@@ -324,6 +324,5 @@ if (!isset($_GET['isp'])) {
 
 $rawIspInfo = getIspInfo($ip);
 $isp = getIsp($rawIspInfo);
-$distance = getDistance($rawIspInfo);
 
 sendResponse($ip, $isp, $distance, $rawIspInfo);
