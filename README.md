@@ -1,4 +1,4 @@
-apt install nginx certbot python3-certbot-nginx php7.4-fpm
+apt install nginx php7.4-fpm
 
 /etc/nginx/sites-available/default
 
@@ -25,6 +25,5 @@ server {
 
 
 
-certbot --nginx -d #domainname
 
 Credit : https://github.com/librespeed/speedtest
