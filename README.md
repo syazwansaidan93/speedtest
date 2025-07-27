@@ -71,7 +71,7 @@ server {
     root /path/to/your-speedtest-folder; # IMPORTANT: Set this to the actual path where you placed the files
     index index.html;
 
-    # Increase client body size limit for uploads (e.g., 100MB)
+    # Increase client body size limit for uploads (e.g., 100MB). This is an Nginx directive.
     client_max_body_size 100M;
 
     location / {
@@ -102,7 +102,7 @@ sudo systemctl reload nginx
 ```
 
 **Note on PHP Upload Limits:**
-If you still encounter "Request Entity Too Large" errors after adjusting `client_max_body_size` in Nginx, you might also need to increase PHP's upload limits. Check your `php.ini` file for the following directives and adjust them as needed (e.g., to `100M` or higher):
+If you still encounter "Request Entity Too Large" errors after adjusting `client_max_body_size` in Nginx, you might also need to increase PHP's upload limits. These are set in your `php.ini` file, not in Nginx. Check your `php.ini` file for the following directives and adjust them as needed (e.g., to `100M` or higher):
 
 ```ini
 upload_max_filesize = 100M
